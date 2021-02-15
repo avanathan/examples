@@ -1,6 +1,6 @@
 package com.interview;
 
-import com.interview.cache.InMemoryCache;
+import com.interview.cache.LRUCache;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 
@@ -12,24 +12,24 @@ public class CacheTest {
 
     @Test
     void cacheTest() {
-        InMemoryCache inMemoryCache = new InMemoryCache(4);
+        LRUCache LRUCache = new LRUCache(4);
 
-        inMemoryCache.put("one", "ONE");
-        inMemoryCache.printAll();
-        inMemoryCache.put("two", "TWO");
-        inMemoryCache.printAll();
-        inMemoryCache.put("three", "THREE");
-        inMemoryCache.get("one");
-        inMemoryCache.printAll();
-        inMemoryCache.put("four", "FOUR");
-        inMemoryCache.printAll();
-        inMemoryCache.put("five", "FIVE");
-        inMemoryCache.printAll();
-        inMemoryCache.put("six", "SIX");
-        inMemoryCache.printAll();
+        LRUCache.put("one", "ONE");
+        LRUCache.printAll();
+        LRUCache.put("two", "TWO");
+        LRUCache.printAll();
+        LRUCache.put("three", "THREE");
+        LRUCache.get("one");
+        LRUCache.printAll();
+        LRUCache.put("four", "FOUR");
+        LRUCache.printAll();
+        LRUCache.put("five", "FIVE");
+        LRUCache.printAll();
+        LRUCache.put("six", "SIX");
+        LRUCache.printAll();
 
-        log.info("one={}", inMemoryCache.get("one"));
-        log.info("two={}", inMemoryCache.get("two"));
+        log.info("one={}", LRUCache.get("one"));
+        log.info("two={}", LRUCache.get("two"));
 
 
     }

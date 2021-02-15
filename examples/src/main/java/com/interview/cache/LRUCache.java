@@ -8,17 +8,17 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 @Slf4j
-public class InMemoryCache  {
+public class LRUCache {
     private final Map<String, String> cacheData = new ConcurrentHashMap<>();
     private final LinkedList<String> linkedList = new LinkedList<>();
     private final int maxSize;
     private static final int DEFAULT_MAX_SIZE = 10;
 
-    public InMemoryCache() {
+    public LRUCache() {
         this(DEFAULT_MAX_SIZE);
     }
 
-    public InMemoryCache(int maxSize) {
+    public LRUCache(int maxSize) {
         this.maxSize = maxSize;
     }
 
